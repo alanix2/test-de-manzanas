@@ -1,16 +1,14 @@
-// Obtén los elementos del DOM
-let empezarButton = document.querySelector('.empezar');
+let empezarButton = document.querySelector('.empezar'); 
 let containerDiv = document.querySelector('.container');
 let h2Element = document.querySelector('#hero h2');
 
-// Agrega el evento de click al botón "Realizar test"
 empezarButton.addEventListener('click', function() {
-    // Cambia la propiedad de estilo `display`
     containerDiv.style.opacity = '1';
     h2Element.style.display = 'none';
     empezarButton.style.display = 'none';
 });
 
+// las preguntas y respuestas
 const quizData = [
     {
       question: '¿Cuál es el nombre científico de la manzana comúnmente consumida?',
@@ -73,6 +71,7 @@ const quizData = [
   let score = 0;
   let incorrectAnswers = [];
   
+  //esto es para que las opciones se muestren en orden aleatorio
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -80,6 +79,7 @@ const quizData = [
     }
   }
   
+  //esto es para mostrar las preguntas y opciones
   function displayQuestion() {
     const questionData = quizData[currentQuestion];
   
@@ -114,6 +114,19 @@ const quizData = [
     quizContainer.appendChild(optionsElement);
   }
   
+  function addOptionClickEvent() {
+    let options = document.querySelectorAll('.option');
+    options.forEach(function(option) {
+        option.addEventListener('click', function() {
+            options.forEach(function(opt) {
+                opt.classList.remove('option-selected');
+            });
+            option.classList.add('option-selected');
+        });
+    });
+}
+
+  //esto es para verificar si la respuesta es correcta o incorrecta
   function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     if (selectedOption) {
@@ -131,6 +144,7 @@ const quizData = [
       selectedOption.checked = false;
       if (currentQuestion < quizData.length) {
         displayQuestion();
+        addOptionClickEvent();
       } else {
         displayResult();
       }
@@ -171,3 +185,4 @@ const quizData = [
 
   
   displayQuestion();
+  addOptionClickEvent();
