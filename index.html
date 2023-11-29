@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    
     <title>AppleRinco</title>
 </head>
 <body>
-    <header class="header">
-        <div class="contenedor">
+    <header class="arriba">
+        <div class="arriba">
             <p class="logo">AppleRinco</p>
             <nav>
             </nav>
@@ -16,12 +17,19 @@
     </header>
     <section id="hero">
         <h2>¿Realmente sabe de manzanas?</h2>
-        <button class="button">Realizar test</button>
+        <button class="empezar">Realizar test</button>
+        <div class="container">
+            <div id="quiz"></div>
+            <div id="result" class="result"></div>
+            <button id="submit" class="button">Siguiente</button>
+            <button id="retry" class="button hide">Reintentar</button>
+        </div>
     </section>
     <footer>
-    <div class="container">
+    <div class="abajo">
         <p>&copy; GetsuCompany</p>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

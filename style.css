@@ -1,22 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 *{
     box-sizing: border-box;
 }
 body{
     font-family: sans-serif;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
 p{ font-size: 1em;}
 
-.contenedor{
+.arriba{
     max-width: 1400px;
     margin: auto;
 }
+
 header{
     color: rgb(100, 100, 100);
 }
+
 header .logo{
     margin: 0;
     font-size: 2em;
@@ -24,22 +29,26 @@ header .logo{
     padding: 15px 20px;
     color: black;
 }
-header .contenedor{
+
+header .arriba{
     display: flex;/*Acomodas los elemento que pongas */
     flex-direction: column;/*y esto lo acomoda para que sea en columna*/
     align-items: center;/*esto hace que se centre*/
 }
+
 header nav{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 header a{
     padding: 15px 20px;
     text-decoration: none;
     font-weight: bold;
     color: black;
 }
+
 #hero{
     display: flex;
     align-items: center;
@@ -56,20 +65,25 @@ header a{
     url(Imagenes/Realmente.jpg);
     background-repeat: no-repeat; /*Para que no se repita la imagen*/
     background-size: cover;
-    background-position: center center;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 #hero h1{
     color: white;
 }
+
 footer{
     background-color: rgb(230,230,230);
 }
+
 footer p{
     margin: 0;
     padding: 12px;
     color: rgb(100, 100, 100);
 }
-.button {
+
+.empezar {
     background-color: white; /* Green */
     border: none;
     color: black;
@@ -84,7 +98,60 @@ footer p{
     border: 2px solid #f44336;
   }
   
-  .button:hover {
+
+.empezar:hover {
     background-color: #f44336;
     color: white;
+}
+
+/* estilos para el quiz */
+
+.container {
+    width: 450px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
+  
+.question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.options {
+    margin-bottom: 20px;
+}
+  
+.option {
+    display: block;
+    margin-bottom: 10px;
+}
+  
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+  
+.button:hover {
+    background-color: #3071a9;
+}
+  
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+  
+.hide{
+    display: none;
+}
