@@ -2,6 +2,8 @@ let empezarButton = document.querySelector('.empezar');
 let containerDiv = document.querySelector('.container');
 let h2Element = document.querySelector('#hero h2');
 
+
+// esto es para que el botón de empezar funcione y se muestre el quiz
 empezarButton.addEventListener('click', function() {
     containerDiv.style.opacity = '1';
     h2Element.style.display = 'none';
@@ -66,7 +68,7 @@ const quizData = [
   const resultContainer = document.getElementById('result');
   const submitButton = document.getElementById('submit');
   const retryButton = document.getElementById('retry');
-  
+
   let currentQuestion = 0;
   let score = 0;
   let incorrectAnswers = [];
@@ -114,6 +116,7 @@ const quizData = [
     quizContainer.appendChild(optionsElement);
   }
   
+  //esto es para que se muestre la opción seleccionada
   function addOptionClickEvent() {
     let options = document.querySelectorAll('.option');
     options.forEach(function(option) {
@@ -151,6 +154,7 @@ const quizData = [
     }
   }
   
+  //esto es para mostrar el resultado
   function displayResult() {
     quizContainer.style.display = 'none';
     submitButton.style.display = 'none';
@@ -158,6 +162,7 @@ const quizData = [
     resultContainer.innerHTML = `Has acertado ${score} de ${quizData.length}!`;
   }
   
+  //esto es para volver a intentar el quiz
   function retryQuiz() {
     currentQuestion = 0;
     score = 0;
@@ -169,12 +174,11 @@ const quizData = [
     displayQuestion();
   }
   
+  //esto es para mostrar el puntaje
   function showAnswer() {
     quizContainer.style.display = 'none';
     submitButton.style.display = 'none';
     retryButton.style.display = 'inline-block';
-  
-  
     resultContainer.innerHTML = `
       
     <p>Has acertado ${score} de ${quizData.length}!</p>
