@@ -22,8 +22,8 @@ const quizData = [
     },
     {
       question: '¿Cuántas calorías aproximadamente tiene una manzana de tamaño mediano?',
-      options: ['50 calorías', '75 calorías', 'Alrededor de 95 calorías', '100 calorías'],
-      answer: 'FAlrededor de 95 caloríasrance',
+      options: ['50 calorías', '75 calorías', '95 calorías', '100 calorías'],
+      answer: '95 calorías',
     },
     {
       question: '¿Cuál es el país líder en la producción mundial de manzanas?',
@@ -47,8 +47,8 @@ const quizData = [
     },
     {
       question: '¿En qué año se cree que se cultivaron las primeras manzanas?',
-      options: ['Se estima que hace más de 4,000 años', '2,000 a.C.', '3,500 a.C.', '5,000 a.C.'],
-      answer: 'Se estima que hace más de 4,000 años',
+      options: ['4,000 a.C.', '2,000 a.C.', '3,500 a.C.', '5,000 a.C.'],
+      answer: '4,000 a.C.',
     },
     {
       question: '¿Cuál es la función principal de la cera natural que recubre la piel de algunas manzanas?',
@@ -57,8 +57,8 @@ const quizData = [
     },
     {
       question: '¿Cuál es el beneficio para la salud asociado con el consumo regular de manzanas?',
-      options: ['Reducción del riesgo de enfermedades cardíacas y mejora de la salud digestiva debido a la fibra y antioxidantes', 'Mejora la visión', 'Fortalece los huesos', 'Aumenta la concentración'],
-      answer: 'Reducción del riesgo de enfermedades cardíacas y mejora de la salud digestiva debido a la fibra y antioxidantes',
+      options: ['Reducción del riesgo de enfermedades cardíacas y mejora de la salud digestiva', 'Mejora la visión', 'Fortalece los huesos', 'Aumenta la concentración'],
+      answer: 'Reducción del riesgo de enfermedades cardíacas y mejora de la salud digestiva',
     },
   ];
   
@@ -176,7 +176,8 @@ const quizData = [
   
   
     resultContainer.innerHTML = `
-      <p>Has acertado ${score} de ${quizData.length}!</p>
+      
+    <p>Has acertado ${score} de ${quizData.length}!</p>
     `;
   }
   
