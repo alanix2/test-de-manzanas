@@ -6,22 +6,20 @@
 body{
     font-family: sans-serif;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
 }
+
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
 p{ font-size: 1em;}
 
-.arriba{
+.contenedor{
     max-width: 1400px;
     margin: auto;
 }
-
 header{
     color: rgb(100, 100, 100);
 }
-
 header .logo{
     margin: 0;
     font-size: 2em;
@@ -29,24 +27,27 @@ header .logo{
     padding: 15px 20px;
     color: black;
 }
-
-header .arriba{
-    display: flex;/*Acomodas los elemento que pongas */
-    flex-direction: column;/*y esto lo acomoda para que sea en columna*/
-    align-items: center;/*esto hace que se centre*/
+header nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
-
-header nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header nav ul li{
+    list-style: none;
+    float: left;
+    
 }
-
 header a{
-    padding: 15px 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    font-weight: bold;
-    color: black;
+}
+header li a:hover {
+    background-color: #111;
 }
 
 #hero{
@@ -55,7 +56,7 @@ header a{
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     color: white;
     background-image: linear-gradient(
         0deg,
@@ -65,26 +66,79 @@ header a{
     url(Imagenes/Realmente.jpg);
     background-repeat: no-repeat; /*Para que no se repita la imagen*/
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
 }
-
 #hero h1{
     color: white;
 }
 
-footer{
-    background-color: rgb(230,230,230);
+.parallax1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url(Imagenes/fondo2.jpg);
+    background-repeat: no-repeat; /*Para que no se repita la imagen*/
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
-footer p{
-    margin: 0;
-    padding: 12px;
-    color: rgb(100, 100, 100);
+.parallax2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url(Imagenes/escine.jpg);
+    background-repeat: no-repeat; /*Para que no se repita la imagen*/
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
-.empezar {
-    background-color: white; /* Green */
+.parallax3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url(Imagenes/fondo3.jpg);
+    background-repeat: no-repeat; /*Para que no se repita la imagen*/
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.parallax-inner {
+    padding: 50px;
+    text-align: center;
+}
+button{
+    background-color: white;
     border: none;
     color: black;
     padding: 16px 32px;
@@ -94,79 +148,24 @@ footer p{
     transition-duration: 0.4s;
     cursor: pointer;
     border: 2px solid #f44336;
-  }
-  
+}
 
-.empezar:hover {
+button:hover{
     background-color: #f44336;
     color: white;
 }
-
-/* estilos para el quiz */
-
-.container {
-    width: 450px;
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 20px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-.question {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-  
-.options {
-    margin-bottom: 20px;
-}
-  
-.option {
+.texto{
     padding: 10px;
-    margin: 10px 0;
-    background-color: #f4f4f4;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-}
-
-.option:hover {
-    background-color: #428bca;
-}
-
-.option input[type='radio'] {
-    margin-right: 10px;
-}
-
-.option-selected {
-    background-color: #428bca;
-}
-  
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #428bca;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    margin-right: 10px;
-}
-  
-.button:hover {
-    background-color: #3071a9;
-}
-  
-.result {
     text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
+    justify-content: center;
+    font-family: Poppins;
 }
-  
-.hide{
-    display: none;
+
+footer{
+    background-color: rgb(230,230,230);
+}
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
 }
